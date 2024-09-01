@@ -16,8 +16,8 @@ const Footer = () => {
   }
   return (
     <div className="bg-black md:pt-20  w-[90%] mb-10 md:w-[80%] lg:max-w-7xl mx-auto ">
-      <div className="w-[90%] bg-black text-white py-4 mx-auto ">
-        <div className="flex flex-col md:flex-row justify-between mt-10">
+      <div className="bg-black text-white py-4 ">
+        <div className="flex flex-col md:flex-row justify-between gap-8 mt-10">
           <div>
             <h1 className="text-yellow-300 md:border-b border-yellow-200 font-extrabold text-3xl">
               NFTVERSE
