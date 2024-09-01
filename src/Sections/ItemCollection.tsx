@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import ItemCollectionsCards from "@/components/ItemCollectionsCards";
+import { motion } from "framer-motion";
 
 const collection = [
   {
@@ -68,7 +69,11 @@ const ItemCollection = () => {
   
 
   return (
-    <div className=" w-[90%] mb-10 md:w-max-w-5xl lg:max-w-5xl xl:max-w-5xl  2xl:maxw-7xl  mx-auto mt-20"
+    <motion.div
+    initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "linear" }}
+    className=" w-[90%] mb-10 md:w-max-w-5xl lg:max-w-5xl xl:max-w-5xl  2xl:maxw-7xl  mx-auto mt-20"
     id="explore"
     >
       <div className="text-center">
@@ -77,7 +82,7 @@ const ItemCollection = () => {
           Foremost Item <br /> Collections
         </h1>
       </div>
-      <div className=" mt-10 ">
+      <div className="mt-10 px-3 md:px-0 ">
         <Slider {...settings}>
           {collection.map((collec, index) => (
             <div key={index} className="slide-item">
@@ -86,7 +91,7 @@ const ItemCollection = () => {
           ))}
         </Slider>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

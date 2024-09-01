@@ -21,7 +21,7 @@ const TopCollectionCard: React.FC<{ collection: Collection; index: number }> = (
   };
 
   return (
-    <div className="h-20 flex border rounded-xl">
+    <div className="h-20 hover:scale-105 cursor-pointer transition-all flex border rounded-xl">
       <div className="p-2 pl-4 text-md flex items-center justify-center">
         {index + 1} {")"}
       </div>

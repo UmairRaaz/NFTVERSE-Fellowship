@@ -21,7 +21,7 @@ interface Collection {
 const DiscoverCollectionCards: React.FC<{ collection: Collection }> = ({ collection }) => {
   return (
     <div
-      className="h-80 border px-2 py-1 cursor-pointer"
+      className="h-80 border hover:scale-105 transition-all px-2 py-1 cursor-pointer"
       onClick={() => window.open(collection.externalUrl, "_blank")}
     >
       <div className="image rounded h-[75%] border">

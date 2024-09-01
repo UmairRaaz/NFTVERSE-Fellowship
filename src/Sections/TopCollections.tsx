@@ -1,6 +1,7 @@
 "use client";
 import TopCollectionCard from "@/components/TopCollectionCard";
 import axios from "axios";
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 const TopCollections = () => {
@@ -29,7 +30,11 @@ const TopCollections = () => {
     fetchCollections();
   }, []);
   return (
-    <div className="mt-32  w-[90%] mb-10 md:w-max-w-5xl lg:max-w-5xl xl:max-w-5xl  2xl:maxw-7xl mx-auto ">
+    <motion.div
+    initial={{ opacity: 0, y: 80 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "linear" }}
+    className="mt-32  w-[90%] mb-10 md:w-max-w-5xl lg:max-w-5xl xl:max-w-5xl  2xl:maxw-7xl mx-auto ">
       <div className="text-center">
         <p className="text-yellow-300">NFTs Collections +</p>
         <h1 className="text-4xl">Top Collections</h1>
@@ -41,7 +46,7 @@ const TopCollections = () => {
             <TopCollectionCard key={index} collection={collection} index={index} />
           ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
